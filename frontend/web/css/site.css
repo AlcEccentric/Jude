@@ -1,0 +1,238 @@
+
+/*
+    Team: JUDE
+    Last Modified By: Li Hongyi, 1511373, 5 July 2017
+    This is a modified css document to set fundamental style of the whole site.
+
+*/
+
+
+
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+   
+
+    position: relative;
+    padding: 5em 0em 7em 0em;
+    background: #000000 url(header-bg.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    height: 850px;
+}
+
+
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+    height: 600px;
+
+    
+}
+div.body-content{
+    position: relative;
+    top: 100px;
+    padding: 40px;
+    width: 100%;
+
+}
+
+div.col-lg-12>p{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 18pt;
+    font-weight: 400;
+    color: white;
+    opacity: 0.8;
+    margin-top:  30px;
+    text-align: left;
+}
+div.col-lg-12>div{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 18pt;
+    font-weight: 400;
+    color: white;
+    opacity: 0.8;
+    margin-top:  30px;
+    text-align: left;
+}
+div.col-lg-12>h2{
+    color: white;
+    opacity: 0.8;
+    margin-top:  150px;
+}
+
+span.over{
+    padding: 4px;
+    background-color: #3333ff;
+    opacity: 0.3;
+    display: none;
+}
+
+a.news{
+    
+    color: white;
+    
+}
+a.proa{
+    color: white;
+    width: 128px;
+}
+div.project{
+    
+    height:128px;
+    width:1060px;
+    position:relative;
+    overflow:hidden;
+
+}
+
+h2.des{
+    position:absolute;
+    height:128px;
+    width: 128px;
+    text-align:center;
+    line-height:140%;
+    
+    opacity:0.5;
+    font-size: 12pt;
+    background:#127dff;
+    color: white;
+    vertical-align:middle;
+    
+}
+
+h2.des>div{
+    padding: 5px;
+    position: relative;
+    top:10px;
+    width: 128px;
+}
+
+div.col-lg-12>a.btn-default{
+    display: inline-block;
+    padding: 1em 2em 1em 2em;
+    letter-spacing: 0.10em;
+    margin-top: 2em;
+    padding: 1.40em 3em;
+    background: #0850d0;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    color: white;
+    opacity: 0.96;
+}
+
+div.col-lg-12>a:hover{
+    opacity: 1;
+    background-color: #193367;
+}
+
+.footer {
+    height: 60px;
+    background-color: #111111;
+    border-top: 1px solid #111111;
+    padding-top: 20px;
+    color: #c1c1c1;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: "\e151";
+}
+
+a.desc:after {
+    content: "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view td {
+    white-space: nowrap;
+}
+
+.grid-view .filters input,
+.grid-view .filters select {
+    min-width: 50px;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
