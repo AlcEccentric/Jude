@@ -236,3 +236,57 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+div.mem>#main {
+    letter-spacing: 0.1em;
+    font-size: 110%;
+    margin: 0 0em;
+    line-height: 1.9;
+    width: 100%;
+    opacity: 0.75;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+div.mem{
+
+    margin:20px;
+    margin-bottom: 200px;
+}
+
+div.mem>#main>h3 {
+
+    padding-top: 20px;
+    font-size: 120%;
+    font-weight: bold;
+    margin: 2em 0em 0.5em 0;
+    padding: 0 0 0 10px;
+    background-color: #EFEFEF;
+    color: #7f7f7f;
+    border-radius: 3px; 
+    height: 150%;
+    line-height: 1.6;
+}
+div.mem>#main>ul a {
+    
+    color: #FFF;
+    
+}
+
+div.mem>#main>ul>li {
+    
+    font-size: 18px;
+    
+}
+
+div.mem>#main td {
+    
+    padding-top: 10px;
+    padding-bottom: 40px;
+    
+}
+div.mem>#main img {
+    
+    padding-right: 20px;
+    
+}
