@@ -149,6 +149,26 @@ class SiteController extends Controller
     }
 
 
+    /**
+     * Displays mem2 page.
+     *
+     * @return mixed
+     */
+    public function actionMem1()
+    {
+        return $this->render('mem1');
+    }
+    
+    /**
+     * Displays mem2 page.
+     *
+     * @return mixed
+     */
+    public function actionMem2()
+    {
+        return $this->render('mem2');
+    }
+    
 
     /**
      * Displays members page.
