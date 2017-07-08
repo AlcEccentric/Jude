@@ -149,6 +149,26 @@ class SiteController extends Controller
     }
 
 
+    /**
+     * Displays mem2 page.
+     *
+     * @return mixed
+     */
+    public function actionMem1()
+    {
+        return $this->render('mem1');
+    }
+    
+    /**
+     * Displays mem2 page.
+     *
+     * @return mixed
+     */
+    public function actionMem2()
+    {
+        return $this->render('mem2');
+    }
+    
 
     /**
      * Displays members page.
@@ -159,6 +179,27 @@ class SiteController extends Controller
     {
         return $this->render('members');
     }
+
+      /**
+     * Displays writings page.
+     *
+     * @return mixed
+     */
+    public function actionWritings1()
+    {
+        return $this->render('writings1');
+    }
+
+     /**
+     * Displays writings page.
+     *
+     * @return mixed
+     */
+    public function actionWritings2()
+    {
+        return $this->render('writings2');
+    }
+
 
     /**
      * Signs user up.
