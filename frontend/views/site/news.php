@@ -17,6 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="newscontents">
         <h2 id="new" class="primary-title">新闻</h2>
+
         <div id="navi-yearly" style="top: 164px;">
         <h5>Archive</h5>
         <ul>
@@ -28,7 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     
     <div id="2017" class="section">
-        <h2  class="yearly"><span>2017</span></h2>
+        <h2  class="yearly"><span>2017</span><a href="#new" class="top">&nbsp&nbsp&nbspTOP</a></h2>
+        
         
         <a href="" target="_blank">
         <div class="article">
@@ -58,7 +60,8 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         </a>
 
-        <h2 id="2016" class="yearly"><span>2016</span></h2>
+        <h2 id="2016" class="yearly"><span>2016</span><a href="#new" class="top">&nbsp&nbsp&nbspTOP</a></h2>
+        
         <a href="" target="_blank">
         <div class="article">
            <p class="image">                

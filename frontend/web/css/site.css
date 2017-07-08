@@ -1,7 +1,7 @@
 
 /*
     Team: JUDE
-    Last Modified By: Li Hongyi, 1511373, 5 July 2017
+    Last Modified By: Li Hongyi, 1511373, 7 July 2017
     This is a modified css document to set fundamental style of the whole site.
 
 */
@@ -236,6 +236,120 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+
+/*extra index css part*/
+.breadcrumb {
+  position: relative;
+  width: 200px;
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+/*members css part*/
+
+.contents {
+    padding-top: 92px;
+    padding-left: 3px;
+    padding-right: 4px;
+    position: relative;
+    background: url(../img/bg-container.png) repeat-y 0 0;
+}
+
+.contents .primary-title {
+    font-size: 40px;
+    color: #3b8fd7;
+    padding: 15px 41px 15px 41px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.section {
+    background: repeat-x 0 0;
+}
+
+.article {
+    clear: both;
+    position: relative;
+    padding: 20px 40px;
+    height: 100%;
+   
+}
+div.section div.members h3, div.section div.members h4{
+    float: none;
+    font-size: 25px;
+    font-weight: normal;
+    color: #3b8fd7;
+    border-bottom: 1px solid #abd5de;
+    width: 100%;
+    clear: both;
+}
+div.section div.article ul li:nth-child(odd) {
+    float: left;
+    position: relative;
+}
+
+div.section div.article ul li:nth-child(even) {
+    float: right;
+    position: relative;
+}
+
+
+div.section div.members ul {
+    padding-left: 77px;
+    width: 1053px;
+}
+
+div.section div.members ul li {
+    border-bottom: 1px #f1f1f1 solid;
+    padding: 10px 10px;
+    width: 300px;
+    margin-right: 38px;
+    _margin-right: 19px;
+    color: #008080;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+
+li {
+    list-style: none;
+}
+
+div.section div.members ul li span.position {
+    font-size: 20px;
+    padding-right: 1em;
+}
+
+div.section div.article ul li a, #members div.article ul li a:link {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 59px;
+    padding-top: 16px;
+    height: 0;
+    overflow: hidden;
+    background: url(../projects_pic/buttons.png) no-repeat -972px 0;
+    
+}
+
+div.section div.article ul li a:hover {
+    background-position: -972px -17px;
+}
+
+div.section div.members ul li a {
+    top: 16px;
+    color: #62a3ab;
+    text-decoration: none;
+}
+
+/* css for mem page*/
 div.mem>#main {
     letter-spacing: 0.1em;
     font-size: 110%;
@@ -262,7 +376,7 @@ div.mem>#main>h3 {
     margin: 2em 0em 0.5em 0;
     padding: 0 0 0 10px;
     background-color: #EFEFEF;
-    color: #7f7f7f;
+    color: #7f7f7f;∏øπ
     border-radius: 3px; 
     height: 150%;
     line-height: 1.6;
@@ -288,9 +402,10 @@ div.mem>#main td {
 div.mem>#main img {
     
     padding-right: 20px;
+
+
     
 }
-
 
 /* css for projects page*/
 
@@ -303,7 +418,8 @@ div.mem>#main img {
     /*background: url(../projects_pic/bg-container.png) repeat-y 0 0;*/
     color: #336699;
     font-size: 12px;
-    margin-bottom: 200px;
+    margin-bottom: 1200px;
+    box-sizing: border-box;
 }
 
 .procontents .primary-title {
@@ -390,16 +506,18 @@ div.mem>#main img {
 
 .procontents .section .yearly, .section .label {
     border-left: 8px solid #c0ba44;
+    border-right: 8px solid #c0ba44;
     height: 40px;
     color: #fff;
     background: #0066cc;
     font-size: 20px;
     line-height: 40px;
-    width: 100px;
+    width: 200px;
     padding: 0 20px;
     position: relative;
     
 }
+
 
 .procontents .article {
     margin-bottom: 20px;
@@ -461,6 +579,7 @@ div.mem>#main img {
     background: url(../projects_pic/buttons.png) no-repeat -359px 0;
 }
 
+
 /* css for news page*/
 
 .newscontents {
@@ -472,7 +591,7 @@ div.mem>#main img {
     /*background: url(../projects_pic/bg-container.png) repeat-y 0 0;*/
     color: #336699;
     font-size: 12px;
-    margin-bottom: 200px;
+    margin-bottom:600px;
 }
 
 .newscontents .primary-title {
@@ -508,17 +627,26 @@ div.mem>#main img {
 
 
 
-.newscontents .section .yearly, .section .label {
+.newscontents .section .yearly, .section .label{
     border-left: 8px solid #c0ba44;
+    border-right: 8px solid #c0ba44;
     height: 40px;
     color: #fff;
     background: #0066cc;
     font-size: 20px;
     line-height: 40px;
-    width: 100px;
+    width: 200px;
     padding: 0 20px;
     position: relative;
     
+}
+
+a.top{
+    color: white
+}
+a.top:hover{
+    color: yellow;
+    text-decoration: none;
 }
 
 .newscontents .article {
