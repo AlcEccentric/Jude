@@ -428,14 +428,14 @@ div.mem>#main img {
     text-align: left;
 }
 
-.article div.text,div.link,div.year{
+.article div.text,div.participants,div.year{
     margin-top: 6px;
     font-size: 20px;
     text-align: left;
     padding-left: 180px;
 }
 
-.article div.link,div.year{
+.article div.participants,div.year{
     margin-top: 3px;
     font-size: 17px;
     text-align: left;
@@ -445,11 +445,11 @@ div.mem>#main img {
     margin-top: 10px;
 }
 
-.article div.link{
+.article div.participants{
     float: right;
 }
 
-.article div.link a, .article div.link a:link {
+.article div.participants a, .article div.participants a:link {
     display: block;
     position: absolute;
     right: 40px;
@@ -459,5 +459,117 @@ div.mem>#main img {
     height: 0;
     overflow: hidden;
     background: url(../projects_pic/buttons.png) no-repeat -359px 0;
+}
+
+/* css for news page*/
+
+.newscontents {
+    width: 100%;
+    padding-top: 92px;
+    padding-left: 3px;
+    padding-right: 4px;
+    position: relative;
+    /*background: url(../projects_pic/bg-container.png) repeat-y 0 0;*/
+    color: #336699;
+    font-size: 12px;
+    margin-bottom: 200px;
+}
+
+.newscontents .primary-title {
+    font-size: 40px;
+    color: #3b8fd7;
+    padding: 15px 41px 15px 41px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+
+
+.newscontents h5{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.newscontents h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.newscontents h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+
+
+
+.newscontents .section .yearly, .section .label {
+    border-left: 8px solid #c0ba44;
+    height: 40px;
+    color: #fff;
+    background: #0066cc;
+    font-size: 20px;
+    line-height: 40px;
+    width: 100px;
+    padding: 0 20px;
+    position: relative;
+    
+}
+
+.newscontents .article {
+    margin-bottom: 20px;
+    margin-top:20px;
+    clear: both;
+    position: relative;
+    padding: 15px 40px;
+    height: 160px;
+    border-bottom: 1px solid white;
+    
+}
+
+.newscontents .article p.image {
+    float: left;
+    width: 164px;
+    padding: 1px;
+    border: 1px solid #ccc;
+}
+
+
+.article div.related{
+    margin-top: 6px;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 180px;
+}
+
+.article div.related{
+    margin-top: 3px;
+    font-size: 17px;
+    text-align: left;
+    padding-left: 180px;
+}
+
+
+
+.article div.related a, .article div.related a:link {
+    display: block;
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    width: 59px;
+    padding-top: 15px;
+    height: 0;
+    overflow: hidden;
+    background: url(../projects_pic/buttons.png) no-repeat -359px 0;
+}
+
+.article div.related{
+    float: right;
+    
 }
 
