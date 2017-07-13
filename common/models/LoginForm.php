@@ -1,4 +1,13 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the LoginForm model file of whole site.
+ */
+
+ /*
+  修改了属性标签名
+ */   
 namespace common\models;
 
 use Yii;
@@ -15,6 +24,17 @@ class LoginForm extends Model
 
     private $_user;
 
+
+    public function attributeLabels()
+    {
+        return [
+                
+                'username' => '用户名',
+               
+                'password' => '密码',
+                
+        ];
+    }
 
     /**
      * @inheritdoc

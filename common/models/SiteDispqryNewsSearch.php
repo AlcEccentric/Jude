@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the SiteDispqryNewsSearch model file of whole site.
+ */
 namespace common\models;
 
 use Yii;
@@ -24,6 +28,7 @@ class SiteDispqryNewsSearch extends SiteDispqryNews
         return [
             [['newsId','newsDate', 'newsStatusId'], 'integer'],
             [['newsTitle', 'newsContent', 'memId','memName'], 'safe'],
+            
         ];
     }
 
@@ -54,7 +59,7 @@ class SiteDispqryNewsSearch extends SiteDispqryNews
             'pagination' => ['pageSize'=>5],
             'sort'=>[
                     'defaultOrder'=>[
-                            'newsId'=>SORT_ASC,                    
+                            'newsDate'=>SORT_DESC,                    
                     ],
             'attributes'=>['newsId','newsDate','newsTitle'],
             ],
@@ -97,6 +102,7 @@ class SiteDispqryNewsSearch extends SiteDispqryNews
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => ['pageSize'=>5],
         ]);
 
         $this->load($params);
@@ -117,6 +123,35 @@ class SiteDispqryNewsSearch extends SiteDispqryNews
     
     }
 
+
+    public function myindexsearch($params)
+    {
+        $query = SiteDispqryNews::find();
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+        // grid filtering conditions
+        $query->andFilterWhere([
+            'newsStatusId' => 2,
+        ])->orderby('newsDate desc')->limit(3);
+
+
+        return $dataProvider;
+    
+    }
 
     
 }

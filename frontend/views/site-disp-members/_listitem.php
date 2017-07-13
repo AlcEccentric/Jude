@@ -1,4 +1,10 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the listitem view file of site-disp-members page of frontend site.
+ */ 
+
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\ListView;
@@ -14,7 +20,7 @@ use yii\widgets\ListView;
   <table border="0">	
 	<tbody>
 	<tr>	
-	  <td width="175"><img src="img/my.jpg" width="150" style="border-radius: 10px;"></td>
+	  <td width="175"><img src="my.jpeg" width="150" style="border-radius: 10px;"></td>
 	  <td>
 		<p> 学号:<?=Html::encode($model->id);?></p>
 		<p> 学院:<?=Html::encode($model->memCol);?></p>

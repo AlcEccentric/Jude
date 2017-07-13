@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: wangyiwen 1511382, 20170712
+ * This is the SiteDispqryWritings model file of whole site.
+ */
 namespace common\models;
 
 use Yii;
@@ -78,7 +82,7 @@ class SiteDispqryWritings extends \yii\db\ActiveRecord
         {
             if($insert)
             {
-                $this->wrtDate = time();                
+                $this->wrtDate = time()+21600;                
             }                        
             return true;                
         }
@@ -87,5 +91,12 @@ class SiteDispqryWritings extends \yii\db\ActiveRecord
             return false;
         }
     } 
+
+     public function getUrl()
+    {
+        return Yii::$app->urlManager->createUrl(
+                ['site-dispqry-writings/details','id'=>$this->wrtId,'title'=>$this->wrtTitle]);
+    }
+    
 
 }

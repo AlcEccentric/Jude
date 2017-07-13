@@ -1,3 +1,8 @@
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170712
+ * This is the css file of whole backend site.
+ */ 
 html,
 body {
     height: 100%;
@@ -117,4 +122,16 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+
+
+div.col-lg-2{
+    text-align: center;
+}
+
+div.col-lg-2 ul{
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }

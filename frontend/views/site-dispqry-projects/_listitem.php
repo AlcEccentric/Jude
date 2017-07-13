@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: wangyiwen 1511382, 20170711
+ * This is the listitem view file of site-dispqry-projects page of frontend site.
+ */ 
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\ListView;
@@ -9,7 +14,7 @@ use yii\widgets\ListView;
 
 */
 ?>
-<h2  class="yearly"><a style="color:yellow " href="<?= $model->url;?>"><?= Html::encode($model->proName);?></a></h2>
+<h2  class="yearly"><a class = "pro" style="color:yellow " ><?= Html::encode($model->proName);?></a></h2>
 <div class="participants">
 		
 		<span class="glyphicon glyphicon-time" aria-hidden="true"></span><em><?= date('Y-m-d H:i:s',$model->proDate)."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";?></em>

@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170710
+ * This is the SiteDispqryNews controller file of frontend site.
+ */ 
 namespace frontend\controllers;
 
 use Yii;
@@ -120,5 +124,19 @@ class SiteDispqryNewsController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+
+    public function actionDetails($id)
+    {
+        $model=$this->findModel($id);
+                
+        //step3.传数据给视图渲染
+        
+        return $this->render('details',[
+                'model'=>$model,
+                
+                
+        ]);
     }
 }

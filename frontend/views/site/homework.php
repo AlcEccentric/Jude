@@ -1,16 +1,14 @@
 <?php
-/*
-	Team: JUDE
-    Last Coded By: Li Hongyi, 1511373, 6 July 2017
-    This is a modified php document to build up the structure of the news site.
-*/
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170712
+ * This is the homework view file of site index page of frontend site.
+ */  
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
-use yii\captcha\Captcha;
 
-$this->title = '李弘毅';
+$this->title = '作业';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
@@ -19,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	    <div id="main">
 		
 
-			<h3>Yiwen Wang</h3> 
+			<h2>团队作业</h2> 
 			<table border="0">
 				<tbody>
 					<tr>
@@ -68,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 
-			<h3><a href="/advanced/frontend/web/index.php?r=site%2Fnews">NEWS</a></h3>
+			<h3><a href="/advanced/frontend/web/index.php?r=site%2Fnews">王毅文(1511382)的个人作业</a></h3>
 			<ul style="font-size:10pt">
 				<li>
 					<span>2017.07.01</span>
@@ -96,26 +94,26 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 
-			<h3><a href="/advanced/frontend/web/index.php?r=site%2Fwritings2">WRITINGS</a></h3>
+			<h3><a href="/advanced/frontend/web/index.php?r=site%2Fwritings1">李弘毅(1511373)的个人作业</a></h3>
 			<ul style="font-size:10pt">
 				<li>
 					<span>2017.07.01</span>
 					
-					<a href="/advanced/frontend/web/index.php?r=site%2Fwritings2" target="_blank">Become a project Assistant Professor of Computer Science Department!</a>
+					<a href="/advanced/frontend/web/index.php?r=site%2Fwritings1" target="_blank">Become a project Assistant Professor of Computer Science Department!</a>
 					 
 				</li>
 				<li> 
 
 					<span>2017.07.02</span>
 					
-					<a href="/advanced/frontend/web/index.php?r=site%2Fwritings2" target="_blank">Become a project Assistant Professor of Computer Science Department!</a>
+					<a href="/advanced/frontend/web/index.php?r=site%2Fwritings1" target="_blank">Become a project Assistant Professor of Computer Science Department!</a>
 					  
 				</li>
 				<li> 
 					
 					<span>2017.07.03</span>
 					
-					<a href="/advanced/frontend/web/index.php?r=site%2Fwritings2" target="_blank">Become a project Assistant Professor of Computer Science Department!</a> 
+					<a href="/advanced/frontend/web/index.php?r=site%2Fwritings1" target="_blank">Become a project Assistant Professor of Computer Science Department!</a> 
 					
 				</li>	
 			</ul>
@@ -163,36 +161,8 @@ $this->params['breadcrumbs'][] = $this->title;
 			</tbody>
 			</table>
 
-			<h3><a href="/advanced/frontend/web/index.php?r=site%2Fwritings2">COMMENTS</a></h3>
-			<ul style="font-size:10pt">
-				<li>
-					<span class ="date">2017.07.01</span>
-					
-					<span>Become a project Assistant Professor of Computer Science Department!</span>
-					 
-				</li>
-				<li> 
-
-					<span class = "date">2017.07.02</span>
-					
-					<span>Become a project Assistant Professor of Computer Science Department!</span>
-					  
-				</li>
-				<li> 
-					
-					<span class = "date">2017.07.03</span>
-					
-					<span>Become a project Assistant Professor of Computer Science Department!</span> 
-					
-				</li>	
-			</ul>
-
-			
-
-
 
 		</div>
 
-	</div>  
-    
+	</div>    
 </div>

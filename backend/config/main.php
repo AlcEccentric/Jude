@@ -1,13 +1,14 @@
 
-
-
-
-
 <?php
-/*
-    Team: JUDE
-    Last Coded By: Li Hongyi, 1511373, 10 July 2017
-    This is a php document to config the environment of the backend site.
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170710
+ * This is the main config file of backend site.
+ */    
+
+/*    
+    这是一个用于配置后台环境的配置文件，最后由李弘毅于7月10日编辑，修改了系统语言，并且为了分离前后台的登录系统，
+    增加了session属性，用于给后台另设session.
 
 */
 $params = array_merge(

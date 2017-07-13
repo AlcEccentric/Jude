@@ -1,10 +1,8 @@
-
-/*
-    Team: JUDE
-    Last Modified By: Li Hongyi, 1511373, 7 July 2017
-    This is a modified css document to set fundamental style of the whole site.
-
-*/
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170706
+ * This is the css file of whole site.
+ */ 
 
 
 
@@ -757,4 +755,7 @@ div.date{
     width: 200px;
     padding: 0 20px;
     position: relative;
+}
+a.pro{
+    text-decoration: none;
 }

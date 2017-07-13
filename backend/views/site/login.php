@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170709
+ * This is the Login view file of backend site.
+ */   
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */

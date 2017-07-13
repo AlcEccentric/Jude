@@ -1,13 +1,17 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the resetpwd view file of site-disp-members page of backend site.
+ */ 
 use yii\helpers\Html;
 
 use yii\bootstrap\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model common\models\SiteDispMembers */
 
-$this->title = '成员管理';
-$this->params['breadcrumbs'][] = ['label' => '重置密码', 'url' => ['index']];
+$this->title = '重置密码';
+$this->params['breadcrumbs'][] = ['label' => '成员管理', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-disp-members-create">

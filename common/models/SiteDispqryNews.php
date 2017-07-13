@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the SiteDispqryNews model file of whole site.
+ */
 namespace common\models;
 use yii\helpers\VarDumper;
 
@@ -84,8 +88,7 @@ class SiteDispqryNews extends \yii\db\ActiveRecord
             {
                 
 
-                $this->newsDate = time();
-                
+                $this->newsDate = time()+21600;                
             }      
             return true;
                 
@@ -103,7 +106,7 @@ class SiteDispqryNews extends \yii\db\ActiveRecord
                 ['site-dispqry-news/details','id'=>$this->newsId,'title'=>$this->newsTitle]);
     }
 
-    public function getBeginning($length=10000)
+    public function getBeginning($length=288)
     {
         $tmpStr = strip_tags($this->newsContent);
         $tmpLen = mb_strlen($tmpStr);

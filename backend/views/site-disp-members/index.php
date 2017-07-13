@@ -1,10 +1,9 @@
 <?php
-/*
-    Team: JUDE
-    Last Coded By: Li Hongyi, 1511373, 10 July 2017
-    This is a php document to render layout of the backend member site.
-
-*/
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170710
+ * This is the index view file of site-disp-members page of backend site.
+ */ 
 use yii\helpers\Html;
 use yii\grid\GridView;
 

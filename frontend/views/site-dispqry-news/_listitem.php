@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170710
+ * This is the listitem view file of site-dispqry-news page of frontend site.
+ */ 
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\ListView;

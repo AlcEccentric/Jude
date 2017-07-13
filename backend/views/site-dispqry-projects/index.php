@@ -1,4 +1,11 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the index view file of site-disp-projects page of backend site.
+ */ 
+
+
 /*
     Team: JUDE
     Last Coded By: Li Hongyi, 1511373, 9 July 2017

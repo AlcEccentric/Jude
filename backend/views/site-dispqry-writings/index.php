@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: wangyiwen 1511382, 20170711
+ * This is the index view file of site-dispqry-writings page of backend site.
+ */ 
 use yii\helpers\Html;
 use yii\grid\GridView;
 use common\models\SiteQryWritingstatus;
@@ -23,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            
 
             ['attribute'=>'wrtId',
             'contentOptions'=>['width'=>'30px'],],

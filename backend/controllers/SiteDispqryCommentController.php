@@ -1,5 +1,17 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: wangyiwen 1511382, 20170710
+ * This is the SiteDispqtyComment controller file of backend site.
+ */   
 
+/* 
+    last coded at 20170711
+    这是后台评论管理模块控制器，
+    除了系统生成控制器的自带功能
+    在7月11号增加了审核评论的控制函数，用于评论审核功能
+
+*/
 namespace backend\controllers;
 
 use Yii;
@@ -124,7 +136,7 @@ class SiteDispqryCommentController extends Controller
 	public function actionApprove($id)
 	{
 		$model = $this->findModel($id);
-		if($model->approve())//审核
+		if($model->approve())//审核完成回到管理首页
 		{
 			return $this->redirect(['index']);
 		}

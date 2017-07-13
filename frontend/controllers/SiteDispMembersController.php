@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: wangyiwen 1511382, 20170711
+ * This is the SiteDispMembers controller file of frontend site.
+ */ 
 namespace frontend\controllers;
 
 use Yii;
@@ -10,7 +14,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\models\User;
 use common\models\SiteDispqryComment;
-
+use yii\helpers\VarDumper;
 /**
  * SiteDispMembersController implements the CRUD actions for SiteDispMembers model.
  */
@@ -126,21 +130,21 @@ class SiteDispMembersController extends Controller
     }
 	public function actionDetail($id)
 	{
-		$model=$this->findModel($id);
-		$userMe = User::findOne(Yii::$app->user->id);
-		$commentModel= new SiteDispqryComment();
-		$commentModel->userId=$userMe->id;
-		//step2. 当评论提交时，处理评论
-    	if($commentModel->load(Yii::$app->request->post()))
-    	{
-    		$commentModel->comStatusId = 1; //新评论默认状态为 pending
-    		$commentModel->memId = $id;
-    		if($commentModel->save())
-    		{
-    			$this->added=1;
-    		}
-    	}
-    	
+
+        $model=$this->findModel($id);
+        $userMe = User::findOne(Yii::$app->user->id);
+        $commentModel= new SiteDispqryComment();
+        $commentModel->userId=$userMe->id;
+        //step2. 当评论提交时，处理评论
+        if($commentModel->load(Yii::$app->request->post()))
+        {
+            $commentModel->comStatusId = 1; //新评论默认状态为 pending
+            $commentModel->memId = $id;
+            if($commentModel->save())
+            {
+                $this->added=1;
+            }
+        }
     	//step3.传数据给视图渲染
     	
     	return $this->render('detail',[

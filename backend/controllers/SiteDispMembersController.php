@@ -1,5 +1,17 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170709
+ * This is the SiteDispMembers controller file of backend site.
+ */   
 
+/*   
+    最后修改于 20170710
+    这是后台组内成员管理控制器，
+    除了系统生成控制器的自带功能
+    在7月10号增加了重置密码的控制函数
+
+*/
 namespace backend\controllers;
 
 use Yii;
@@ -128,19 +140,19 @@ class SiteDispMembersController extends Controller
         }
     }
 
-    public function actionResetpwd($id)
+    public function actionResetpwd($id)//重置密码函数
     {
-        $model = new ResetpwdForm();
+        $model = new ResetpwdForm();//新建了一个重置密码Form模型，由后者将视图中AF获得的数据写入数据库，参考了前台的重置密码代码
     
         if ($model->load(Yii::$app->request->post())) {
             
-            if($model->resetPassword($id))
+            if($model->resetPassword($id))//没有出错则渲染首页
             {
                 return $this->redirect(['index']);
             }
         }
          
-        return $this->render('resetpwd', [
+        return $this->render('resetpwd', [//出错则根据model已有内容渲染重置密码界面，
                 'model' => $model,
         ]);
     

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the User model file of whole site.
+ */
 namespace common\models;
 
 use Yii;

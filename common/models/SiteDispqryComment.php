@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: wangyiwen 1511382, 20170711
+ * This is the SiteDispqryComment model file of whole site.
+ */
 
 namespace common\models;
 
@@ -34,7 +39,7 @@ class SiteDispqryComment extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['comContent', 'comStatusId', 'memId', 'userId', 'comTime'], 'required'],
+            [['comContent', 'comStatusId', 'memId', 'userId'], 'required'],
             [['comContent'], 'string'],
             [['comStatusId', 'userId', 'comTime'], 'integer'],
             [['memId'], 'string', 'max' => 7],
@@ -93,4 +98,27 @@ class SiteDispqryComment extends \yii\db\ActiveRecord
 		$this->comStatusId=2;//设置评论为已审核
 		return ($this->save()?true:false); 
 	}
+
+    //自动生成时间
+    public function beforeSave($insert)
+    {
+        
+        if(parent::beforeSave($insert))
+        {
+            if($insert)
+            {
+                
+
+                $this->comTime = time()+21600;
+                
+            }      
+            return true;
+                
+        }
+        else 
+        {
+            
+            return false;
+        }
+    } 
 }

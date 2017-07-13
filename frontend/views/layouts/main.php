@@ -1,10 +1,9 @@
 <?php
-/*
-    Team: JUDE
-    Last Coded By: Li Hongyi, 1511373,11 July 2017
-    This is a php document to build up a fundamental structure of the whole site.
-
-*/
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170705
+ * This is the main view file of frontend site.
+ */  
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -117,7 +116,7 @@ AppAsset::register($this);
 
     <?php
     NavBar::begin([
-        'brandLabel' => 'Jude',
+        'brandLabel' => 'Jude    组长:李弘毅 组员:王毅文',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -130,6 +129,8 @@ AppAsset::register($this);
         ['label' => 'News', 'url' => ['/site-dispqry-news/index']],
         ['label' => 'Projects', 'url' => ['/site-dispqry-projects/index']],
         ['label' => 'Members', 'url' => ['/site-disp-members/index']],
+        ['label' => '作业', 'url' => ['/site/homework']],
+            
         
     ];
     if (Yii::$app->user->isGuest) {

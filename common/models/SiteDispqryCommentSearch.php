@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: wangyiwen 1511382, 20170711
+ * This is the SiteDispqryCommentSearch model file of whole site.
+ */
 
 namespace common\models;
 

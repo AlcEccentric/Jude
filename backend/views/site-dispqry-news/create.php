@@ -1,10 +1,10 @@
 <?php
-/*
-    Team: JUDE
-    Last Coded By: Li Hongyi, 1511373, 9 July 2017
-    This is a php document to render the create page of the backend news site.
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the create view file of site-disp-news page of backend site.
+ */ 
 
-*/
 use yii\helpers\Html;
 
 

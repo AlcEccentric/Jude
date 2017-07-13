@@ -1,4 +1,10 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170708
+ * This is the main config file of frontend site.
+ */ 
+
 /*
     Team: JUDE
     Last Coded By: Li Hongyi, 1511373, 9 July 2017

@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: wangyiwen 1511382, 20170711
+ * This is the form view file of site-disp-members page of frontend site.
+ */ 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 

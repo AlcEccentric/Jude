@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: wangyiwen 1511382, 20170711
+ * This is the SiteDispProjects controller file of frontend site.
+ */ 
 namespace frontend\controllers;
 
 use Yii;
@@ -36,7 +40,7 @@ class SiteDispqryProjectsController extends Controller
     public function actionIndex()
     {
         $searchModel = new SiteDispqryProjectsSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider = $searchModel->mysearch(Yii::$app->request->queryParams);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -120,5 +124,18 @@ class SiteDispqryProjectsController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+////////
+    public function actionDetails($id)
+    {
+        $model=$this->findModel($id);
+                
+        //step3.传数据给视图渲染
+        
+        return $this->render('details',[
+                'model'=>$model,
+                
+                
+        ]);
     }
 }

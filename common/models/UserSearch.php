@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the UserSearch model file of whole site.
+ */
 namespace common\models;
 
 use Yii;

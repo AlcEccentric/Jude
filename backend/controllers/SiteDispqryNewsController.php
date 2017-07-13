@@ -1,4 +1,17 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170709
+ * This is the SiteDispqryNews controller file of backend site.
+ */   
+
+/*
+    generated and coded by 李弘毅1511373 at 2017-07-09
+    last coded at 2017-07-09
+    这是后台新闻管理模块控制器，
+    仅带有系统生成控制器的自带功能
+
+*/
 
 namespace backend\controllers;
 

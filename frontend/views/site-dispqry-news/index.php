@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170710
+ * This is the index view file of site-dispqry-news page of frontend site.
+ */ 
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\ListView;
@@ -63,7 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				'itemView'=>'_listitem',//子视图,显示一篇文章的标题等内容.
 				'layout'=>'{items} {pager}',
 				'pager'=>[
-						'maxButtonCount'=>3,
+						'maxButtonCount'=>1,
 						'nextPageLabel'=>Yii::t('app','下一页'),
 						'prevPageLabel'=>Yii::t('app','上一页'),
 		],

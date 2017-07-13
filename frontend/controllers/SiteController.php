@@ -1,16 +1,17 @@
 <?php
-
-    /*
-    Team: JUDE
-    Last Coded By: Li Hongyi, 1511373, 6 July 2017
-    This is a modified php document to attribute different php files to different sites.
-    */
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170708
+ * This is the site controller file of frontend site.
+ */ 
 
 namespace frontend\controllers;
 
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
+use common\models\SiteDispqryNews;
+use common\models\SiteDispqryNewsSearch;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -19,9 +20,11 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-
+use common\models\SiteDispqryProjects;
+use common\models\SiteDispqryProjectsSearch;
 /**
- * Site controller
+ * Site controller implements the CRUD actions for SiteDispqryNews model.
+ Site controller implements the CRUD actions for SiteDispqryProjects model.
  */
 class SiteController extends Controller
 {
@@ -79,7 +82,18 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        
+        $searchModel = new SiteDispqryNewsSearch();
+        $dataProvider = $searchModel->myindexsearch(Yii::$app->request->queryParams);
+        $searchModel0 = new SiteDispqryProjectsSearch();
+        $dataProvider0 = $searchModel0->myindexsearch(Yii::$app->request->queryParams);
+       
+        return $this->render('index', 
+           array('searchModel' => $searchModel,
+           'dataProvider' => $dataProvider,
+           'searchModel0' => $searchModel0,
+           'dataProvider0' => $dataProvider0,)
+       );
     }
 
     /**
@@ -102,6 +116,13 @@ class SiteController extends Controller
             ]);
         }
     }
+
+    public function actionView($id)
+   {
+        return $this->render('view', [
+           'model' => $this->findModel($id),
+       ]);
+   }
 
     /**
      * Logs out the current user.
@@ -143,32 +164,23 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionNews()
+    public function actionHomework()
     {
-        return $this->render('news');
+        return $this->render('homework');
     }
 
-    /**
-     * Displays mem2 page.
-     *
-     * @return mixed
-     */
-    public function actionMem1()
-    {
-        return $this->render('mem1');
-    }
-    
-    /**
-     * Displays mem2 page.
-     *
-     * @return mixed
-     */
-    public function actionMem2()
-    {
-        return $this->render('mem2');
-    }
-    
 
+
+    protected function findModel($id)
+   {
+    
+    if (($model = SiteDispqryNews::findOne($id)) !== null) {
+           return $model;
+       } else {
+           throw new NotFoundHttpException('The requested page does not exist.');
+    }
+    
+}
     /**
      * Displays members page.
      *

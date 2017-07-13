@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the SiteDispMembersSearch model file of whole site.
+ */
 
 namespace common\models;
 
@@ -60,7 +65,8 @@ class SiteDispMembersSearch extends SiteDispMembers
         // grid filtering conditions
         $query->andFilterWhere([
             'memAge' => $this->memAge,
-        ]);
+
+        ])->where('id'!='0000000');
 
         $query->andFilterWhere(['like', 'id', $this->id])
             ->andFilterWhere(['like', 'nickname', $this->nickname])
@@ -75,4 +81,6 @@ class SiteDispMembersSearch extends SiteDispMembers
 
         return $dataProvider;
     }
+
+
 }

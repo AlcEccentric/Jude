@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: wangyiwen 1511382, 20170712
+ * This is the SiteDispqryWritingsSearch model file of whole site.
+ */
 namespace common\models;
 
 use Yii;
@@ -23,7 +27,7 @@ class SiteDispqryWritingsSearch extends SiteDispqryWritings
     {
         return [
             [['wrtId', 'wrtDate', 'wrtsStatusId'], 'integer'],
-            [['memId', 'wrtTitle', 'wrtContent','authorName'], 'safe'],
+            [['memId', 'wrtTitle', 'wrtContent'], 'safe'],
         ];
     }
 

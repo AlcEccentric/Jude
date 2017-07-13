@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170712
+ * This is the SiteDispqryProjectsSearch model file of whole site.
+ */
 namespace common\models;
 
 use Yii;
@@ -91,5 +95,64 @@ class SiteDispqryProjectsSearch extends SiteDispqryProjects
 
 
         return $dataProvider;
+    }
+    public function mysearch($params)
+    {
+        $query = SiteDispqryProjects::find();
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize'=> '4',
+            ],
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+        // grid filtering conditions
+        $query->andFilterWhere([
+            'proStatusId' => 2,
+        ])->orderby('proDate desc');
+
+
+        return $dataProvider;
+    
+    }
+
+    public function myindexsearch($params)
+    {
+        $query = SiteDispqryProjects::find();
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+        // grid filtering conditions
+        $query->andFilterWhere([
+            'proStatusId' => 2,
+        ])->orderby('proDate desc')->limit(3);
+
+
+        return $dataProvider;
+    
     }
 }

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the SiteDispMembers model file of whole site.
+ */
 /*
     Team: JUDE
     Last Coded By: Li Hongyi, 1511373, 10 July 2017
@@ -76,6 +81,7 @@ class SiteDispMembers extends \yii\db\ActiveRecord implements IdentityInterface
           'password_reset_token' => 'Password Reset Token',
           'password' => '密码',
           'username' => '用户名',
+          'newssta'=>2,
         ];
     }
 
@@ -97,7 +103,10 @@ class SiteDispMembers extends \yii\db\ActiveRecord implements IdentityInterface
      */
     public function getSiteDispqryNews()
     {
-        return $this->hasMany(SiteDispqryNews::className(), ['memId' => 'id']);
+        return $this->hasMany(SiteDispqryNews::className(), ['memId' => 'id'])
+                    ->where('newsStatusId = 2')
+                    ->orderby('newsDate desc')
+                    ->limit(3) ;
     }
 
     /**
@@ -105,7 +114,10 @@ class SiteDispMembers extends \yii\db\ActiveRecord implements IdentityInterface
      */
     public function getSiteDispqryProjects()
     {
-        return $this->hasMany(SiteDispqryProjects::className(), ['memId' => 'id']);
+        return $this->hasMany(SiteDispqryProjects::className(), ['memId' => 'id'])
+                     ->where('proStatusId = 2')
+                    ->orderby('proDate desc')
+                    ->limit(3);
     }
 
     /**
@@ -254,5 +266,17 @@ class SiteDispMembers extends \yii\db\ActiveRecord implements IdentityInterface
 	public function getCommentCount()
     {
     	return SiteDispqryComment::find()->where(['memId'=>$this->id,'comStatusId'=>2])->count();
+    }
+    public function getNewsCount()
+    {
+        return SiteDispqryNews::find()->where(['memId'=>$this->id,'newsStatusId'=>2])->count();
+    }
+    public function getWrtsCount()
+    {
+        return SiteDispqryWritings::find()->where(['memId'=>$this->id,'wrtsStatusId'=>2])->count();
+    }
+    public function getProCount()
+    {
+        return SiteDispqryProjects::find()->where(['memId'=>$this->id,'proStatusId'=>2])->count();
     }
 }

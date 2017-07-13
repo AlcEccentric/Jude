@@ -1,12 +1,16 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170710
+ * This is the update view file of site-disp-members page of backend site.
+ */ 
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\SiteDispMembers */
 
-$this->title = 'Update Site Disp Members: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Site Disp Members', 'url' => ['index']];
+$this->title = '更新成员信息: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => '成员管理', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

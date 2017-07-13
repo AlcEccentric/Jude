@@ -1,5 +1,18 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: wangyiwen 1511382, 20170710
+ * This is the SiteDispqryWritings controller file of backend site.
+ */   
 
+/*
+    Team: JUDE
+    generated and coded by 王毅文1511382 at 2017-07-10
+    last coded at 2017-07-11
+    这是文章管理模块控制器，
+    仅带有系统生成控制器的自带功能
+
+*/
 namespace backend\controllers;
 
 use Yii;

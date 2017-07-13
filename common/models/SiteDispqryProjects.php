@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the SiteDispqryProjects model file of whole site.
+ */
 namespace common\models;
 use yii\helpers\VarDumper;
 use Yii;
@@ -85,7 +89,7 @@ class SiteDispqryProjects extends \yii\db\ActiveRecord
         {
             if($insert)
             {
-                $this->proDate = time();
+                $this->proDate = time()+21600; 
                 
             }
             
@@ -103,7 +107,8 @@ class SiteDispqryProjects extends \yii\db\ActiveRecord
         return Yii::$app->urlManager->createUrl(
                 ['site-dispqry-projects/details','id'=>$this->proId,'title'=>$this->proName]);
     }
-public function getBeginning($length=288)
+    
+    public function getBeginning($length=288)
     {
         $tmpStr = strip_tags($this->proIntro);
         $tmpLen = mb_strlen($tmpStr);

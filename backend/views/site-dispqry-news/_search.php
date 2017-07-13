@@ -1,4 +1,11 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170711
+ * This is the search view file of site-disp-news page of backend site.
+ */ 
+
+
 /*
     Team: JUDE
     Last Coded By: Li Hongyi, 1511373, 9 July 2017

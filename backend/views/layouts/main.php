@@ -1,8 +1,14 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170709
+ * This is the main view file of backend site.
+ */   
+
 /*
-    Team: JUDE
     Last Coded By: Li Hongyi, 1511373, 9 July 2017
     This is a php document to render the identical page part of the backend membersite.
+    修改了导航栏的文字，并将其链接到了不同后台模块
 
 */
 /* @var $this \yii\web\View */

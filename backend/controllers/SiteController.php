@@ -1,4 +1,11 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170709
+ * This is the Site controller file of backend site.
+ */   
+
+
 namespace backend\controllers;
 
 use Yii;

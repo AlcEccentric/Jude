@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170710
+ * This is the form view file of site-dispqry-news page of frontend site.
+ */ 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
