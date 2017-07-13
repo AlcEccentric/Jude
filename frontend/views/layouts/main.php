@@ -1,10 +1,9 @@
 <?php
-/*
-    Team: JUDE
-    Last Coded By: Li Hongyi, 1511373, 6 July 2017
-    This is a php document to build up a fundamental structure of the whole site.
-
-*/
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170705
+ * This is the main view file of frontend site.
+ */  
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -117,7 +116,7 @@ AppAsset::register($this);
 
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Team',
+        'brandLabel' => 'Jude    组长:李弘毅 组员:王毅文',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -127,9 +126,12 @@ AppAsset::register($this);
 
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'News', 'url' => ['/site/news']],
-        ['label' => 'Projects', 'url' => ['/site/projects']],
-        ['label' => 'Members', 'url' => ['/site/members']]
+        ['label' => 'News', 'url' => ['/site-dispqry-news/index']],
+        ['label' => 'Projects', 'url' => ['/site-dispqry-projects/index']],
+        ['label' => 'Members', 'url' => ['/site-disp-members/index']],
+        ['label' => '作业', 'url' => ['/site/homework']],
+            
+        
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
@@ -138,7 +140,7 @@ AppAsset::register($this);
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
+                'Logout (' . Yii::$app->user->identity->email . ')',
                 ['class' => 'btn btn-link logout']
             )
             . Html::endForm()

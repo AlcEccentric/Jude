@@ -1,5 +1,16 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170709
+ * This is the main view file of backend site.
+ */   
 
+/*
+    Last Coded By: Li Hongyi, 1511373, 9 July 2017
+    This is a php document to render the identical page part of the backend membersite.
+    修改了导航栏的文字，并将其链接到了不同后台模块
+
+*/
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -29,17 +40,23 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Jude',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => '首页', 'url' => ['/site/index']],
+        ['label' => '文章管理', 'url' => ['/site-dispqry-writings/index']],
+            ['label' => '评论管理', 'url' => ['/site-dispqry-comment/index']],
+            ['label' => '项目管理', 'url' => ['/site-dispqry-projects/index']],
+            ['label' => '新闻管理', 'url' => ['/site-dispqry-news/index']],
+            ['label' => '用户管理', 'url' => ['/user/index']],
+            ['label' => '组内成员管理', 'url' => ['/site-disp-members/index']],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => '登录', 'url' => ['/site/login']];
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
@@ -68,7 +85,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; Jude <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

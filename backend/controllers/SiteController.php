@@ -1,11 +1,18 @@
 <?php
+/**
+ * Team: Jude
+ * Coding By: lihongyi 1511373, 20170709
+ * This is the Site controller file of backend site.
+ */   
+
+
 namespace backend\controllers;
 
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
+use common\models\MemberLoginForm;
 
 /**
  * Site controller
@@ -61,7 +68,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout="main_layout";
+        
         return $this->render('index');
     }
 
@@ -76,7 +83,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        $model = new LoginForm();
+        $model = new MemberLoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {

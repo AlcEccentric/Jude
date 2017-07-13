@@ -1,0 +1,144 @@
+<?php
+/**
+ * Team: Jude
+ * Coding By: wangyiwen 1511382, 20170710
+ * This is the SiteDispqtyComment controller file of backend site.
+ */   
+
+/* 
+    last coded at 20170711
+    这是后台评论管理模块控制器，
+    除了系统生成控制器的自带功能
+    在7月11号增加了审核评论的控制函数，用于评论审核功能
+
+*/
+namespace backend\controllers;
+
+use Yii;
+use common\models\SiteDispqryComment;
+use common\models\SiteDispqryCommentSearch;
+use yii\web\Controller;
+use yii\web\NotFoundHttpException;
+use yii\filters\VerbFilter;
+
+/**
+ * SiteDispqryCommentController implements the CRUD actions for SiteDispqryComment model.
+ */
+class SiteDispqryCommentController extends Controller
+{
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
+    }
+
+    /**
+     * Lists all SiteDispqryComment models.
+     * @return mixed
+     */
+    public function actionIndex()
+    {
+        $searchModel = new SiteDispqryCommentSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Displays a single SiteDispqryComment model.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionView($id)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+
+    /**
+     * Creates a new SiteDispqryComment model.
+     * If creation is successful, the browser will be redirected to the 'view' page.
+     * @return mixed
+     */
+    public function actionCreate()
+    {
+        $model = new SiteDispqryComment();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->comId]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    /**
+     * Updates an existing SiteDispqryComment model.
+     * If update is successful, the browser will be redirected to the 'view' page.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionUpdate($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->comId]);
+        } else {
+            return $this->render('update', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    /**
+     * Deletes an existing SiteDispqryComment model.
+     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionDelete($id)
+    {
+        $this->findModel($id)->delete();
+
+        return $this->redirect(['index']);
+    }
+
+    /**
+     * Finds the SiteDispqryComment model based on its primary key value.
+     * If the model is not found, a 404 HTTP exception will be thrown.
+     * @param integer $id
+     * @return SiteDispqryComment the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    protected function findModel($id)
+    {
+        if (($model = SiteDispqryComment::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+	public function actionApprove($id)
+	{
+		$model = $this->findModel($id);
+		if($model->approve())//审核完成回到管理首页
+		{
+			return $this->redirect(['index']);
+		}
+	}
+}

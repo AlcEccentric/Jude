@@ -38,6 +38,18 @@ class SignupForm extends Model
         ];
     }
 
+
+    public function attributeLabels()
+    {
+        return [
+                
+                'username' => '用户名',
+                'password' =>'密码',
+                'email' => 'Email',
+                'verifyCode' => '验证码',
+        ];
+    }
+
     /**
      * Signs user up.
      *
