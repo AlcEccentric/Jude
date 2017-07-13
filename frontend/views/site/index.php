@@ -68,7 +68,7 @@ $this->title = 'My Yii Application';
                         <h2 class="des">
                             <div>探索的プログラミングのための小規模バージョン管理ツール</div>
                         </h2>
-                        <img class="proimg" style="margin-right: 20px" src="http://www-ui.is.s.u-tokyo.ac.jp/projects/assets_c/2017/04/abstract-thumb-128x128-225.jpg" alt="project image">
+                        <img class="proimg" style="margin-right: 20px" src="projects_pic/abstract-thumb-128x128-225.jpg" alt="project image">
                         <span>探索的プログラミングのための小規模バージョン管理ツール</span>
                       </a>
                       
@@ -79,7 +79,7 @@ $this->title = 'My Yii Application';
                           <h2 class="des">
                               <div>AssisTag</div>
                           </h2>
-                          <img class="proimg" src="http://www-ui.is.s.u-tokyo.ac.jp/projects/assets_c/2017/02/overview-thumb-128x128-223.png" style="margin-right: 20px" alt="project image">
+                          <img class="proimg" src="projects_pic/overview-thumb-128x128-223.png" style="margin-right: 20px" alt="project image">
                           <span>AssisTag</span>
                       </a>
 
@@ -92,13 +92,13 @@ $this->title = 'My Yii Application';
                         <h2 class="des">
                           <div>Interactive Volume Segmentation with Threshold Field Painting</div>
                         </h2>
-                        <img class="proimg" style="margin-right: 20px" src="http://www-ui.is.s.u-tokyo.ac.jp/projects/assets_c/2016/10/IVSTFP-thumb-128x128-219.png" alt="project image">
+                        <img class="proimg" style="margin-right: 20px" src="projects_pic/IVSTFP-thumb-128x128-219.png" alt="project image">
                         <span>Interactive Volume Segmentation with Threshold Field Painting</span>
                       </a>
                     
                     </div>
 
-                    <a class="btn btn-default" href="/advanced/frontend/web/index.php?r=site%2Fcontact">More &raquo;</a>
+                    <a class="btn btn-default" href="/advanced/frontend/web/index.php?r=site%2Fprojects">More &raquo;</a>
                     
                     
 
@@ -129,7 +129,7 @@ $this->title = 'My Yii Application';
 
                     
 
-                   <a class="btn btn-default" href="/advanced/frontend/web/index.php?r=site%2Fabout">More &raquo;</a>
+                   <a class="btn btn-default" href="/advanced/frontend/web/index.php?r=site%2Fnews">More &raquo;</a>
                 </div>
                 
             </div>

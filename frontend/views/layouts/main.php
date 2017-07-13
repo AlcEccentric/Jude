@@ -1,7 +1,7 @@
 <?php
 /*
     Team: JUDE
-    Last Coded By: Li Hongyi, 1511373, 6 July 2017
+    Last Coded By: Li Hongyi, 1511373,11 July 2017
     This is a php document to build up a fundamental structure of the whole site.
 
 */
@@ -117,7 +117,7 @@ AppAsset::register($this);
 
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Team',
+        'brandLabel' => 'Jude',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -127,9 +127,10 @@ AppAsset::register($this);
 
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'News', 'url' => ['/site/news']],
-        ['label' => 'Projects', 'url' => ['/site/projects']],
-        ['label' => 'Members', 'url' => ['/site/members']]
+        ['label' => 'News', 'url' => ['/site-dispqry-news/index']],
+        ['label' => 'Projects', 'url' => ['/site-dispqry-projects/index']],
+        ['label' => 'Members', 'url' => ['/site-disp-members/index']],
+        
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
@@ -138,7 +139,7 @@ AppAsset::register($this);
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
+                'Logout (' . Yii::$app->user->identity->email . ')',
                 ['class' => 'btn btn-link logout']
             )
             . Html::endForm()

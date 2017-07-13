@@ -1,4 +1,10 @@
 <?php
+/*
+    Team: JUDE
+    Last Coded By: Li Hongyi, 1511373, 9 July 2017
+    This is a php document to config the environment of the frontend site.
+
+*/
 $params = array_merge(
     require(__DIR__ . '/../../common/config/params.php'),
     require(__DIR__ . '/../../common/config/params-local.php'),
@@ -11,6 +17,7 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'language'=>'zh-CN',//修改界面语言
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
