@@ -7,6 +7,8 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+use yii\captcha\Captcha;
 
 $this->title = '王毅文';
 $this->params['breadcrumbs'][] = $this->title;
